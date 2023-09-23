@@ -9,3 +9,8 @@ body {
   background-color: #232946;
   color: #FFFFFF;
 }
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./Inter-VariableFont_slnt\,wght.ttf);
+}
