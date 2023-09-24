@@ -1,4 +1,5 @@
-import Work from "@/components/home/Work";
+import Features from "@/components/landing/Features";
+import HeroSection from "@/components/landing/HeroSection";
 import Head from "next/head";
 
 
@@ -6,8 +7,8 @@ import Head from "next/head";
 export default function Home() {
   return (
     <div className="">
-        Home
-        <Work />
+         <HeroSection />
+         <Features />
     </div>
   )
 }

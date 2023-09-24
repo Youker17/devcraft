@@ -4,6 +4,7 @@ const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './assets/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -18,7 +19,26 @@ const config: Config = {
         primary: '#B8C1EC',
         secondary: '#FFFFFE',
         tertinary: '#EEBBC3',
-      }
+      },
+      boxShadow:{
+        buttonShadow :"0px 2px 65px 0px #EEBBC3",
+        starShadow:"0px 4px 50px #EEBBC3",
+      },
+      animation: {
+        bounce: 'bounce 5s infinite',
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(-25%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+        },
+      },
     },
   },
   plugins: [],

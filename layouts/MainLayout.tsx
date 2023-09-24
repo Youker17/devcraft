@@ -9,7 +9,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         <div className="">
             <Header />
             {children}
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
