@@ -10,7 +10,6 @@ import Map from '../ui/Map'
 function HeroSection() {
   return (
     <div className='w-full h-screen  top-0 left-0   flex flex-col items-center text-center  '>
-      <Map />
        <Image src={hero__img} className='w-full h-[893px] absolute -z-10' alt='hero__img' draggable={false} />   
        <Image src={img__effect} className='w-full h-[800px] absolute -z-10' alt='hero__img' draggable={false} />   
        <Image src={plusses} className='w-full h-[800px] absolute -z-10' alt='hero__img' draggable={false} />   

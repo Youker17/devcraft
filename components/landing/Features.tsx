@@ -3,7 +3,7 @@ import Feature from './Feature'
 
 function Features() {
   return (
-    <div className=' pt-[180px] w-full h-screen  '>
+    <div className=' pt-[180px] w-full h-full  '>
         <p className=' text-center text-[16px] font-normal  leading-normal uppercase tracking-[0.48px] text-primary'>FEATURES</p>
         <h1 className=' text-5xl font-bold leading-normal text-center'>Unlock Innovation with Our Exclusive Features</h1>
         <div className='grid grid-cols-3 p-[136px] gap-y-[163px] w-full '>
