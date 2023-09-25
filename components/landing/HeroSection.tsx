@@ -6,7 +6,7 @@ import plusses from "@/assets/plusses.png"
 import {ArrowDown, Company, Star} from "@/assets/Icons" 
 import Stars from '../ui/Stars'
 import Map from '../ui/Map'
-import {Variants, motion} from "framer-motion"
+import {Variants, delay, motion} from "framer-motion"
 
 function HeroSection() {
   
@@ -17,11 +17,21 @@ function HeroSection() {
     animate: {
         // Define animation properties if any
     },
+    exit:{
+      transition: {
+        duration: 10 // Adjust the duration here (in seconds)
+    }
+    },
     hover: {
         width: "275px",
         scale: 1.1,
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        transition: {
+          duration: 0.5 // Adjust the duration here (in seconds)
+      }
     }, 
+   
+    
 }
 
 const ArrowAnimation:Variants = {
@@ -31,7 +41,10 @@ const ArrowAnimation:Variants = {
     },
     hover: {
         position: "static",
-        translateY: "0px"
+        translateY: "0px",
+        transition: {
+          duration: 0.5 // Adjust the duration here (in seconds)
+      }
     },
     animate:{
         
@@ -53,7 +66,10 @@ const ArrowAnimation:Variants = {
         <Stars containerStyle='self-start ml-20 ' bigStarStyle=' left-0 w-[30.016px] h-[42.838px]' topLeftStarStyle='absolute hidden top-8 left-0 w-[16.669px] h-[21.371px]' bottomLeftStarStyle='absolute hidden top-[4.5rem]  w-[13.677px] h-[15.814px]' />
         <Stars containerStyle='absolute bottom-72  right-4    ' bigStarStyle=' left-0 w-[47.016px] h-[59.838px]' topLeftStarStyle='absolute  top-0  left-0 w-[16.669px] h-[21.371px]' bottomLeftStarStyle='absolute hidden top-[4.5rem]  w-[13.677px] h-[15.814px]' />
         <p className='w-[777px] text-primary opacity-70 leading-normal pt-[17px] font-medium tracking-[0.36px]  pb-[70px] text-[24px]'>WebCraft is where your digital dreams come to life. Innovation  meets expertise as we craft exceptional online experiences that elevate your brand.</p>
-        <button className='rounded-[5pxl] hover:scale-105 duration-300 ease-in-out  rounded-[4px text-background text-lg font-bold leading-normal shadow-buttonShadow py-[16px] px-[54px] cursor-pointer bg-tertinary '>Explore Plans</button>
+        <motion.button initial="initial" variants={BtnAnimation} animate="animate" whileHover={'hover'} exit={"exit"}  className='relative overflow-hidden justify-center flex-row w-[251px] flex rounded-[4px] text-background text-lg font-bold leading-normal shadow-buttonShadow hover:shadow-buttonShadowHover py-[16px] cursor-pointer bg-tertinary'>
+          Explore Plans
+          <ArrowDown style='absolute  -top-20' variants={ArrowAnimation}  />
+        </motion.button>
         <Stars containerStyle='absolute bottom-16 left-0' bigStarStyle='absolute top-8 left-0 w-[47.016px] h-[59.838px]' topLeftStarStyle='absolute top-8 left-0 w-[16.669px] h-[21.371px]' bottomLeftStarStyle='absolute top-[4.5rem]  w-[13.677px] h-[15.814px]' />
        </div>
       <div className='flex w-full pt-[133px] justify-around'>
