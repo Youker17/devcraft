@@ -26,7 +26,7 @@ function Map() {
   const navigate = (view:number) => {
     
     window.scrollTo({
-      top: screenHeight * (view-1),
+      top: screenHeight * (view-1) + (screenHeight * (view-1)/2),
       behavior: 'smooth'
     })
   }

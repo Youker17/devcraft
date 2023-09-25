@@ -7,39 +7,30 @@ import { Bars } from "@/assets/Icons";
 
 
 
-
-
-
-
-
-
-
 export default function Header() {
-    const [lastScrollY, setLastScrollY] = useState(0)
-    const [direction, setDirection] = useState<"up" | "down">("down")
-
-
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [direction, setDirection] = useState<'up' | 'down'>('down');
 
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > lastScrollY) {
-                setDirection("up")
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY) {
+                setDirection('up');
             } else {
-                setDirection("down")
+                setDirection('down');
             }
-            setLastScrollY(window.scrollY)
-        })
+
+            setLastScrollY(currentScrollY);
+            console.log(direction, currentScrollY, lastScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', () => {
-                if (window.scrollY > lastScrollY) {
-                    setDirection("up")
-                } else {
-                    setDirection("down")
-                }
-            })
-        }
-    }, [])
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY, direction]);
 
 
 
@@ -60,6 +51,13 @@ export default function Header() {
                         <p className="text-sm leading-normal tracking-[7.75px]">Devcraft studio</p>
             </div></Link>
                 <ul className=" gap-y-4 justify-around absolute top-48 xl:static  flex-col xl:flex-row items-center  text-2xl h-full flex">
+            transition={{
+                duration: 0.5,
+                ease: "easeInOut"
+            }}
+            className=" flex fixed w-full z-[100] ">
+            <nav className="mx-[37px] my-[23px] h-[132px] w-full bg-primary/25 backdrop-blur-sm rounded-lg">
+                <ul className="flex justify-around flex-row items-center  text-2xl h-full">
                     <Link href={"#"}><li className="tracking-[4.41px]">About</li></Link>
                     <Link href={"#"}><li className="tracking-[4.41px]">Our Work</li></Link>
                     <Link href={"#"} className="hidden xl:block"><li className="">
