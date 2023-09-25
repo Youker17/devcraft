@@ -1,4 +1,6 @@
 import { twMerge } from "tailwind-merge"
+import { Variants, motion} from "framer-motion"
+
 
 export const Star:React.FC<{style:string}> = ({style}) => (
   
@@ -47,10 +49,16 @@ export const Company:React.FC = () => (
 )
 
 
-
-
 export const Check = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
 <path d="M31 20.5833L22.6667 28.9167L18.5 24.75M24.75 43.5C14.3947 43.5 6 35.1053 6 24.75C6 14.3947 14.3947 6 24.75 6C35.1053 6 43.5 14.3947 43.5 24.75C43.5 35.1053 35.1053 43.5 24.75 43.5Z" stroke="#0F2C59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+)
+
+
+export const ArrowDown:React.FC<{variants:Variants | undefined,style?:string}> = ({variants,style}) => (
+  <motion.svg variants={variants}  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={twMerge("w-6 h-6 ",style)}>
+  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+</motion.svg>
+
 )

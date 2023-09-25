@@ -22,10 +22,15 @@ const config: Config = {
       },
       boxShadow:{
         buttonShadow :"0px 2px 65px 0px #EEBBC3",
+        buttonShadowHover: '0px 2px 65px 0px #EEBBC3, 0px 0px 20px 5px #EEBBC3 ',
         starShadow:"0px 4px 50px #EEBBC3",
       },
+      gridTemplateColumns: {
+        featuresGrid: 'repeat(auto-fit, minmax(var(--min-value), 1fr))',
+      },
       animation: {
-        bounce: 'bounce 5s infinite',
+        bounce: 'bounce 10s infinite',
+        Arrowbounce: 'bounce 1s infinite',
       },
       keyframes: {
         bounce: {
