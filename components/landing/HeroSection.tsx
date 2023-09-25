@@ -56,8 +56,8 @@ const ArrowAnimation:Variants = {
 
 
   return (
-    <div className='w-full h-screen  top-0 left-0   flex flex-col items-center text-center  '>
-       <Image src={hero__img} className='w-full h-[893px] absolute -z-10' alt='hero__img' draggable={false} />   
+    <div className='w-full h-screen  top-0 left-0   flex flex-col items-center text-center    '>
+       <Image src={hero__img} className='w-full h-[893px] absolute z-10' alt='hero__img' draggable={false} />   
        <Image src={img__effect} className='w-full h-[800px] absolute -z-10' alt='hero__img' draggable={false} />   
        <Image src={plusses} className='w-full h-[800px] absolute -z-10' alt='hero__img' draggable={false} />   
        <div className='flex flex-col items-center text-center relative mt-[140px] '>

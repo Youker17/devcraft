@@ -62,3 +62,11 @@ export const ArrowDown:React.FC<{variants:Variants | undefined,style?:string}> =
 </motion.svg>
 
 )
+
+
+
+export const Bars:React.FC<{style:string}> = ({style}) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none" className={style }>
+  <path d="M4.5 6H20.5M7.5 12H17.5M11.5 18H13.5" stroke="#FFFFFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+)
