@@ -4,7 +4,7 @@ import { Variants, motion} from "framer-motion"
 
 export const Star:React.FC<{style:string}> = ({style}) => (
   
-<svg xmlns="http://www.w3.org/2000/svg" width="107" height="129" viewBox="0 0 107 129" fill="none" className={twMerge(" animate-bounce   ",style)} >
+<svg xmlns="http://www.w3.org/2000/svg" width="107" height="129" viewBox="0 0 107 129" fill="none" className={twMerge(" animate-bounce  ",style)} >
 <g filter="url(#filter0_d_380_1930)">
   <path d="M53.5 19L55.1712 32.6916C57.1575 48.9656 69.3622 61.9613 85.1629 64.6268L89 65.2741L85.1629 65.9214C69.3622 68.5869 57.1575 81.5825 55.1712 97.8566L53.5 111.548L51.8288 97.8566C49.8425 81.5825 37.6378 68.5869 21.8371 65.9214L18 65.2741L21.8371 64.6268C37.6378 61.9613 49.8425 48.9657 51.8288 32.6916L53.5 19Z" fill="#EEBBC3"/>
 </g>
@@ -61,4 +61,12 @@ export const ArrowDown:React.FC<{variants:Variants | undefined,style?:string}> =
   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
 </motion.svg>
 
+)
+
+
+
+export const Bars:React.FC<{style:string,onClick:() => void}> = ({style,onClick}) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none" className={style } onClick={onClick}>
+  <path d="M4.5 6H20.5M7.5 12H17.5M11.5 18H13.5" stroke="#FFFFFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 )
