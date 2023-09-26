@@ -9,6 +9,7 @@ import Stars from '../ui/Stars'
 import Map from '../ui/Map'
 import { Variants, delay, motion } from "framer-motion"
 import { TypeAnimation } from 'react-type-animation';
+import { easeInOut } from 'framer-motion/dom'
 
 
 function HeroSection() {
@@ -59,24 +60,30 @@ function HeroSection() {
   return (
     <div className='w-full h-screen  top-0 left-0   flex flex-col items-center text-center  '>
       <Image src={hero__img} className='w-full h-full absolute z-10' alt='hero__img' draggable={false} />
-      <Image src={img__effect} className='w-full h-[800px] opacity-30 absolute z-20' alt='hero__img' draggable={false} />
+      <Image src={img__effect} className='w-full h-[800px] animate-pulse opacity-50 absolute z-20' alt='hero__img' draggable={false} />
       <div className='flex flex-col z-30 items-center text-center relative mt-[140px] '>
         <Stars containerStyle='absolute top-0 left-0  drop-shadow-[0px_4px_77px_#EEBBC3]' bigStarStyle='absolute top-8 left-0 w-[47.016px] h-[59.838px]' topLeftStarStyle='absolute top-8 left-0 w-[16.669px] h-[21.371px]' bottomLeftStarStyle='absolute top-[4.5rem]  w-[13.677px] h-[15.814px]' />
         <h1 className='  drop-shadow-[0px_4px_50px_#231D4F] w-[906px] mono  pt-[84px] text-[65px] font-extrabold overflow-visible   tracking-[2px] leading-[144.5%] '>
-          <div className='w-full flex flex-row gap-2 mx-auto overflow-visible justify-center'>
-            Crafting
-             <span className='text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-white w-1/2 overflow-visible  flex flex-row '>
-              <TypeAnimation className='overflow-visible'  sequence={['Experiences,', 4000, 'Artpieces,', 4000, 'identities,', 4000]} cursor={true} repeat={Infinity} wrapper="div" />
-            </span><br />
+          <div className='w-full gap-2 mx-auto overflow-visible justify-center'>
+            <p className='text-7xl'>
+              Not Just Websites
+            </p>
+            <div className='flex flex-row mx-auto justify-center items-center'>
+              Crafting <span className='text-transparent'>-</span>
+              <TypeAnimation className='overflow-visible text-transparent bg-gradient-to-r from-tertinary to-white bg-clip-text' sequence={[' Experiences', 4000, ' Artpieces', 4000, ' identities', 4000]} cursor={true} repeat={Infinity} wrapper="span" /> <motion.p className='w-2 h-14 animate-pulse duration-100  bg-white'></motion.p>
+            </div>
           </div>
-          Not   Just Websites</h1>
+        </h1>
         <Stars containerStyle='self-start ml-20 ' bigStarStyle=' left-0 w-[30.016px] h-[42.838px]' topLeftStarStyle='absolute hidden top-8 left-0 w-[16.669px] h-[21.371px]' bottomLeftStarStyle='absolute hidden top-[4.5rem]  w-[13.677px] h-[15.814px]' />
         <Stars containerStyle='absolute bottom-72  right-4    ' bigStarStyle=' left-0 w-[47.016px] h-[59.838px]' topLeftStarStyle='absolute  top-0  left-0 w-[16.669px] h-[21.371px]' bottomLeftStarStyle='absolute hidden top-[4.5rem]  w-[13.677px] h-[15.814px]' />
         <p className='w-[777px] text-primary opacity-70 leading-normal pt-[17px] font-medium tracking-[0.36px]  pb-[70px] text-[24px]'>WebCraft is where your digital dreams come to life. Innovation  meets expertise as we craft exceptional online experiences that elevate your brand.</p>
-        <motion.button initial="initial" variants={BtnAnimation} animate="animate" whileHover={'hover'} exit={"exit"} className='relative overflow-hidden justify-center flex-row w-[251px] flex rounded-[4px] text-background text-lg font-bold leading-normal shadow-buttonShadow hover:shadow-buttonShadowHover py-[16px] cursor-pointer bg-tertinary'>
-          Explore Plans
-          <div></div>
-          <ArrowDown style='absolute  -top-20' variants={ArrowAnimation} />
+        <motion.button className='relative hover:scale-110 transition-all duration-300 overflow-hidden group justify-center flex-row w-[251px] flex rounded-[4px] text-background text-lg font-bold leading-normal shadow-buttonShadow hover:shadow-buttonShadowHover py-[16px] cursor-pointer bg-tertinary'>
+          <div className=' mr-3 w-fit group-hover:-translate-x-5 transition-all transform'>
+            Explore Plans
+          </div>
+          <svg className="w-4 h-4 absolute right-10 text-background duration-300 -translate-y-96 group-hover:translate-y-2 transition-all " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+          </svg>
         </motion.button>
         <Stars containerStyle='absolute bottom-16 left-0' bigStarStyle='absolute top-8 left-0 w-[47.016px] h-[59.838px]' topLeftStarStyle='absolute top-8 left-0 w-[16.669px] h-[21.371px]' bottomLeftStarStyle='absolute top-[4.5rem]  w-[13.677px] h-[15.814px]' />
       </div>

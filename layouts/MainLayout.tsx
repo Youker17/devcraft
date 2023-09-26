@@ -9,7 +9,7 @@ import '@/styles/globals.css'
 export default function MainLayout({ children }: { children: React.ReactNode }) {
     return (
         <div className="">
-            <Loader />
+            {/* <Loader /> */}
             <Header />
             <Map />
             {children}
