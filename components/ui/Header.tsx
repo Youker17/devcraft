@@ -1,77 +1,137 @@
-"use client"
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+"use client";
 import { motion } from "framer-motion";
-import { Bars } from "@/assets/Icons";
-
-
-
+import { Sling as Hamburger } from "hamburger-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Header() {
-    const [lastScrollY, setLastScrollY] = useState(0);
-    const [direction, setDirection] = useState<'up' | 'down'>('down');
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [direction, setDirection] = useState<"up" | "down">("down");
+  const [open, setOpen] = useState<boolean>(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-            if (currentScrollY > lastScrollY) {
-                setDirection('up');
-            } else {
-                setDirection('down');
-            }
+      if (currentScrollY > lastScrollY && window.innerWidth > 1023) {
+        console.log(window.innerWidth < 1023);
+        setDirection("up");
+      } else {
+        setDirection("down");
+      }
 
-            setLastScrollY(currentScrollY);
-            console.log(direction, currentScrollY, lastScrollY);
-        };
+      setLastScrollY(currentScrollY);
+      console.log(direction, currentScrollY, lastScrollY);
+    };
 
-        window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [lastScrollY, direction]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY, direction]);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1023) {
+        setOpen(false);
+      } else {
+        setOpen(false);
+      }
+    });
+  }, []);
 
-
-    return (
-        <motion.div initial={{
-            translateY: -100
-        }} animate={{
-            translateY: direction === "down" ? 0 : -200
+  return (
+    <>
+      <motion.div
+        initial={{
+          translateY: -100,
+        }}
+        animate={{
+          translateY: direction === "down" ? 0 : -200,
         }}
         transition={{
-            duration: 0.5,
-            ease: "easeInOut"
+          duration: 0.5,
+          ease: "easeInOut",
         }}
-        className=" flex fixed w-full z-[100]  ">
-            <nav className="mx-[37px] my-[23px] h-[132px] relative w-full md:bg-primary/25 backdrop-blur-sm rounded-lg justify-center md:justify-between md:px-16 flex-col gap-y-10 md:gap-y-10 md:flex-row items-center flex xl:block ">
-            <Link href={"#"}><div className="xl:hidden">
-                        <h1 className="text-5xl  font-bold drop-shadow-lg "><span className=" text-tertinary ">Dev</span>Craft</h1>
-                        <p className="text-sm leading-normal tracking-[7.75px]">Devcraft studio</p>
-            </div></Link>
-                <ul className=" gap-y-4 justify-around absolute top-48 xl:static  flex-col xl:flex-row items-center  text-2xl h-full flex">
-            transition={{
-                duration: 0.5,
-                ease: "easeInOut"
-            }}
-            className=" flex fixed w-full z-[100] ">
-            <nav className="mx-[37px] my-[23px] h-[132px] w-full bg-primary/25 backdrop-blur-sm rounded-lg">
-                <ul className="flex justify-around flex-row items-center  text-2xl h-full">
-                    <Link href={"#"}><li className="tracking-[4.41px]">About</li></Link>
-                    <Link href={"#"}><li className="tracking-[4.41px]">Our Work</li></Link>
-                    <Link href={"#"} className="hidden xl:block"><li className="">
-                        <h1 className="text-5xl  font-bold drop-shadow-lg "><span className=" text-tertinary ">Dev</span>Craft</h1>
-                        <p className="text-sm leading-normal tracking-[7.75px]">Devcraft studio</p>
-                    </li></Link>
-                    <Link href={"#"}><li className="tracking-[4.41px]">Pricing</li></Link>
-                    <Link href={"#"}>
-                        <button className=" bg-tertinary px-[32px] py-[10px] text-black   font-semibold leading-normal text-lg  rounded-[4px] ">Book a call</button>
-                    </Link>
-                </ul>
-                <Bars style="xl:hidden cursor-pointer" />
-            </nav>
-          
-        </motion.div>
-    )
+        className=" flex fixed w-full z-[100]  "
+      >
+        {/* */}
+        <motion.nav
+          initial={{}}
+          animate={
+            open
+              ? { height: "70vh", margin: 0, backgroundColor: "#0f172a" }
+              : undefined
+          }
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          exit={{ height: "132px", backgroundColor: "#fff" }}
+          className="mx-0 my-0 md:mx-[37px] md:my-[23px] h-[132px] relative w-full bg-primary/25  backdrop-blur-sm rounded-lg lg:flex lg:flex-row overflow-hidden  md:justify-between px-8 md:px-16 flex-col gap-y-10 md:gap-y-10  xl:block "
+        >
+          <div className="flex-row flex w-full  lg:w-auto justify-between items-center mt-8 lg:mt-0 ">
+            <Link href={"#"} className=" xl:hidden">
+              <div className="">
+                <h1 className="text-5xl  font-bold drop-shadow-lg ">
+                  <span className=" text-tertinary ">Dev</span>Craft
+                </h1>
+                <p className="text-sm leading-normal tracking-[7.75px]">
+                  Devcraft studio
+                </p>
+              </div>
+            </Link>
+            <div className="lg:hidden ">
+              <Hamburger toggled={open} toggle={setOpen} />
+            </div>
+          </div>
+
+          <motion.ul
+            initial={{}}
+            animate={open ? { opacity: 1 } : undefined}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            exit={{}}
+            className={twMerge(
+              "justify-around absolute lg:static mt-20   lg:flex-row lg:items-center  text-2xl lg:h-full flex-col flex gap-20    lg:gap-6  lg:mt-0"
+            )}
+          >
+            <Link href={"#"}>
+              <li className="xl:tracking-[4.41px]">About</li>
+            </Link>
+            <Link href={"#"}>
+              <li className="xl:tracking-[4.41px]">Our Work</li>
+            </Link>
+            <Link href={"#"} className="hidden xl:block">
+              <li className="">
+                <h1 className="text-5xl  font-bold drop-shadow-lg ">
+                  <span className=" text-tertinary ">Dev</span>Craft
+                </h1>
+                <p className="text-sm leading-normal tracking-[7.75px]">
+                  Devcraft studio
+                </p>
+              </li>
+            </Link>
+            <Link href={"#"}>
+              <li className="xl:tracking-[4.41px]">Pricing</li>
+            </Link>
+            <Link href={"#"}>
+              <button className=" bg-tertinary px-[32px] py-[10px] text-black font-semibold leading-normal text-lg  rounded-[4px] ">
+                Book a call
+              </button>
+            </Link>
+          </motion.ul>
+        </motion.nav>
+      </motion.div>
+      <motion.div
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+        className={twMerge(
+          "w-full fixed top-0 opacity-0 left-0 h-screen bg-black/20 backdrop-blur-md "
+        )}
+        style={!open ? { zIndex: "-1000" } : {zIndex:"40"}}
+      ></motion.div>
+    </>
+  );
 }
