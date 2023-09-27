@@ -61,13 +61,11 @@ export default function Header() {
         <motion.nav
           initial={{}}
           animate={
-            open
-              ? { height: "70vh", margin: 0, backgroundColor: "#0f172a" }
-              : undefined
+            open   ? { height: "80vh", backgroundColor: "#0f172a" , margin:0} : undefined
           }
           transition={{ duration: 0.5, ease: "easeInOut" }}
           exit={{ height: "132px", backgroundColor: "#fff" }}
-          className="mx-0 my-0 md:mx-[37px] md:my-[23px] h-[132px] relative w-full bg-primary/25  backdrop-blur-sm rounded-lg lg:flex lg:flex-row overflow-hidden  md:justify-between px-8 md:px-16 flex-col gap-y-10 md:gap-y-10  xl:block "
+          className=" md:mx-[37px] md:my-[23px] h-[132px] relative w-full bg-primary/25  backdrop-blur-sm rounded-lg lg:flex lg:flex-row overflow-hidden  md:justify-between px-8 md:px-16 flex-col gap-y-10 md:gap-y-10  xl:block "
         >
           <div className="flex-row flex w-full  lg:w-auto justify-between items-center mt-8 lg:mt-0 ">
             <Link href={"#"} className=" xl:hidden">
@@ -91,11 +89,13 @@ export default function Header() {
             transition={{ duration: 1, ease: "easeInOut" }}
             exit={{}}
             className={twMerge(
-              "justify-around absolute lg:static mt-20   lg:flex-row lg:items-center  text-2xl lg:h-full flex-col flex gap-20    lg:gap-6  lg:mt-0"
+              "justify-around absolute lg:static mt-20  w-full lg:w-auto  lg:flex-row lg:items-center  text-2xl lg:h-full flex-col flex gap-20    lg:gap-6  lg:mt-0"
             )}
           >
             <Link href={"#"}>
-              <li className="xl:tracking-[4.41px]">About</li>
+              <motion.li className="xl:tracking-[4.41px]  duration-300 py-4 w-[85%] lg:w-full px-4 rounded-lg  ">
+                About
+              </motion.li>
             </Link>
             <Link href={"#"}>
               <li className="xl:tracking-[4.41px]">Our Work</li>
@@ -130,7 +130,7 @@ export default function Header() {
         className={twMerge(
           "w-full fixed top-0 opacity-0 left-0 h-screen bg-black/20 backdrop-blur-md "
         )}
-        style={!open ? { zIndex: "-1000" } : {zIndex:"40"}}
+        style={!open ? { zIndex: "-1000" } : { zIndex: "60" }}
       ></motion.div>
     </>
   );

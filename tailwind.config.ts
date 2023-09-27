@@ -23,6 +23,7 @@ const config: Config = {
       boxShadow:{
         buttonShadow :"0px 2px 65px 0px #EEBBC3",
         buttonShadowHover: '0px 2px 65px 0px #EEBBC3, 0px 0px 20px 5px #EEBBC3 ',
+        linksShadow : "inset 300px 0 0 0 #54b3d6",
         starShadow:"0px 4px 50px #EEBBC3",
       },
       gridTemplateColumns: {
