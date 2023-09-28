@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Stars from "../ui/Stars";
 
 
 
@@ -120,8 +121,8 @@ export default function Work() {
     return (
         <div className="h-screen relative flex flex-col justify-around items-center" >
             <div className="w-full flex flex-col gap-2 items-center">
-                <p className=' text-center text-[10px] font-normal  leading-normal uppercase tracking-[0.48px] text-primary'> OUR WORK</p>
-                <h1 className='text-lg lg:text-5xl font-bold leading-normal text-center'>Witness Excellence: Our Impressive Portfolio</h1>
+                <p className='text-center text-sm md:text-[16px] font-normal  leading-normal uppercase tracking-[0.48px] text-primary'> OUR WORK</p>
+                <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold leading-normal text-center'>Witness Excellence: Our Impressive Portfolio</h1>
             </div>
             <motion.div className="h-1/2 w-full p-5 lg:container">
                 <Swiper
@@ -238,6 +239,12 @@ export default function Work() {
                     </motion.div>
                 }
             </AnimatePresence>
+            <Stars
+          containerStyle="absolute bottom-10 hideen right-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
+          bigStarStyle="absolute top-8 left-0 w-[47.016px] h-[59.838px] animate-bounce"
+          topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px] animate-bounce"
+          bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px] animate-bounce"
+        />
         </div>
     )
 }
