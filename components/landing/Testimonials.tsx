@@ -9,9 +9,9 @@ function Testimonials() {
   return (
     <div className="flex flex-col justify-center items-center relative">
       <Stars
-        containerStyle="hidden sm:flex absolute top-0 left-20 lg:left-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
-        bigStarStyle="absolute top-8 left-0 w-[128px] h-[149px] opacity-20 "
-        topLeftStarStyle="absolute top-8 left-20 w-[47px] h-[51px] opacity-70"
+        containerStyle="flex absolute -top-12 lg:top-0 left-0 lg:left-20 lg:left-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
+        bigStarStyle="absolute top-0 left-0 w-20 h-20 lg:w-[128px] lg:h-[149px] opacity-20 "
+        topLeftStarStyle="hidden lg:flex absolute top-6 left-20 w-[47px] h-[51px] opacity-70"
         bottomLeftStarStyle="hidden"
       />
       <p className=" text-center text-sm md:text-[16px] font-normal  leading-normal uppercase tracking-[0.48px] text-primary ">
@@ -21,8 +21,8 @@ function Testimonials() {
         What our clients say about us.
       </h1>
       <Stars
-        containerStyle="absolute top-20 right-48  drop-shadow-[0px_4px_77px_#EEBBC3]"
-        bigStarStyle="absolute top-8 left-0 w-[128px] h-[149px] opacity-20 "
+        containerStyle="absolute top-16 md:top-20 right-32 md:right-48  drop-shadow-[0px_4px_77px_#EEBBC3]"
+        bigStarStyle="absolute top-8 left-0 w-20 h-20 md:w-[128px] md:h-[149px] opacity-20 "
         topLeftStarStyle="hidden"
         bottomLeftStarStyle="hidden"
       />
@@ -59,9 +59,9 @@ function Testimonials() {
         ))}
       </Swiper>
       <Stars
-        containerStyle="absolute bottom-32 left-20 lg:left-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
-        bigStarStyle="absolute top-8 left-0 w-[128px] h-[149px] opacity-20 "
-        topLeftStarStyle="absolute top-8 left-20 w-[47px] h-[51px] opacity-70"
+        containerStyle="absolute bottom-48 md:bottom-32 left-5 md:left-20 lg:left-20 w-full  drop-shadow-[0px_4px_77px_#EEBBC3]"
+        bigStarStyle="absolute top-8 left-0  w-24 h-24 md:w-[128px] md:h-[149px] opacity-20 "
+        topLeftStarStyle="absolute top-8 right-16 top-48 md:top-10 md:left-20 w-[47px] h-[51px] opacity-70"
         bottomLeftStarStyle="hidden"
       />
       <button className=" text-background cursor-pointer z-20 bg-tertinary w-fit font-bold text-[16px] uppercase leading-[150%] py-[16px] px-[24px] mt-[111px] rounded-[5px]">

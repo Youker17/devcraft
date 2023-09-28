@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-export default function Header() {
+export default function MobileHeader() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [direction, setDirection] = useState<"up" | "down">("down");
   const [open, setOpen] = useState<boolean>(false);
@@ -55,7 +55,7 @@ export default function Header() {
           duration: 0.5,
           ease: "easeInOut",
         }}
-        className="hidden md:flex fixed w-full z-[100]  "
+        className="flex md:hidden absolute w-full z-[100]  "
       >
         {/* */}
         <motion.nav
@@ -64,10 +64,10 @@ export default function Header() {
             open   ? { height: "90vh", backgroundColor: "#0f172a" , margin:0} : undefined
           }
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          exit={{ height: "132px", backgroundColor: "#fff" }}
-          className=" md:mx-[37px] md:my-[23px] h-[100px] xs:h-[132px] relative w-full bg-primary/25  backdrop-blur-sm rounded-lg lg:flex lg:flex-row overflow-hidden  md:justify-between px-8 md:px-16 flex-col gap-y-10 md:gap-y-10  xl:block "
+          exit={{ height: "250px", backgroundColor: "#fff" }}
+          className="  relative w-full   backdrop-blur-sm rounded-lg h-46   overflow-hidden   px-8  flex-col gap-y-10  "
         >
-          <div className="flex-row flex w-full  lg:w-auto justify-between items-center mt-4 xs:mt-8 lg:mt-0 ">
+          <div className="flex-col flex w-full  items-center mt-4 xs:mt-8  gap-6 ">
             <Link href={"#"} className=" xl:hidden">
               <div className="">
                 <h1 className="text-4xl xs:text-5xl  font-bold drop-shadow-lg ">
@@ -89,26 +89,16 @@ export default function Header() {
             transition={{ duration: 1, ease: "easeInOut" }}
             exit={{}}
             className={twMerge(
-              "justify-around absolute lg:static mt-20  w-full lg:w-auto  lg:flex-row lg:items-center  text-2xl lg:h-full flex-col flex gap-20    lg:gap-6  lg:mt-0"
+              "justify-around absolute  mt-20  w-full   text-2xl lg:h-full flex-col flex gap-20 "
             )}
           >
             <Link href={"#"}>
-              <motion.li className="xl:tracking-[4.41px]  duration-300 py-4 w-[85%] lg:w-full px-4 rounded-lg  ">
+              <motion.li className="xl:tracking-[4.41px]  duration-300 py-4 w-[85%]  px-4 rounded-lg  ">
                 About
               </motion.li>
             </Link>
             <Link href={"#"}>
               <li className="xl:tracking-[4.41px]">Our Work</li>
-            </Link>
-            <Link href={"#"} className="hidden xl:block">
-              <li className="">
-                <h1 className="text-5xl  font-bold drop-shadow-lg ">
-                  <span className=" text-tertinary ">Dev</span>Craft
-                </h1>
-                <p className="text-sm leading-normal tracking-[7.75px]">
-                  Devcraft studio
-                </p>
-              </li>
             </Link>
             <Link href={"#"}>
               <li className="xl:tracking-[4.41px]">Pricing</li>

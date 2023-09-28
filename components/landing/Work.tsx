@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Stars from "../ui/Stars";
 
 
 
@@ -238,6 +239,12 @@ export default function Work() {
                     </motion.div>
                 }
             </AnimatePresence>
+            <Stars
+          containerStyle="absolute bottom-10 hideen right-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
+          bigStarStyle="absolute top-8 left-0 w-[47.016px] h-[59.838px] animate-bounce"
+          topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px] animate-bounce"
+          bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px] animate-bounce"
+        />
         </div>
     )
 }

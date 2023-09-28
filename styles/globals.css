@@ -16,6 +16,12 @@ body {
     src: url(./Inter-VariableFont_slnt\,wght.ttf);
 }
 
+.swiper-slide-active > div{
+   border: 4px solid #EEBBC3;
+}
+
+
+
 /* *{
   border: 2px solid red;
 } */
