@@ -63,9 +63,9 @@ function HeroSection() {
       <div className="flex flex-col z-30 items-center text-center relative mt-[140px] ">
         <Stars
           containerStyle="absolute top-0 left-10 lg:left-0  drop-shadow-[0px_4px_77px_#EEBBC3]"
-          bigStarStyle="absolute top-8 left-0 w-[47.016px] h-[59.838px]"
-          topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px]"
-          bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px]"
+          bigStarStyle="absolute top-8 left-0 w-[47.016px] h-[59.838px] animate-bounce"
+          topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px] animate-bounce"
+          bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px] animate-bounce"
         />
         <h1 className=" z-30  drop-shadow-[0px_4px_50px_#231D4F] w-auto xl:w-[906px] mono  pt-[84px] text-4xl sm:text-5xl md:text-[65px] font-extrabold overflow-visible   tracking-[2px] leading-[144.5%] ">
           <div className="w-full flex flex-row gap-2 mx-auto overflow-visible justify-center">
@@ -92,14 +92,14 @@ function HeroSection() {
         </h1>
         <Stars
           containerStyle="self-start ml-20 "
-          bigStarStyle=" left-0 w-[30.016px] h-[42.838px]"
+          bigStarStyle=" left-0 w-[30.016px] h-[42.838px] animate-bounce"
           topLeftStarStyle="hidden"
           bottomLeftStarStyle="hidden"
         />
         <Stars
           containerStyle="absolute bottom-72  right-4    "
-          bigStarStyle=" left-0 w-[47.016px] h-[59.838px]"
-          topLeftStarStyle="absolute  top-0  left-0 w-[16.669px] h-[21.371px] " 
+          bigStarStyle=" left-0 w-[47.016px] h-[59.838px] animate-bounce "
+          topLeftStarStyle="absolute  top-0  left-0 w-[16.669px] h-[21.371px] animate-bounce" 
           bottomLeftStarStyle=" hidden"
         />
         <p className="md:w-[777px] mx-5 text-primary opacity-70 leading-normal pt-[17px] font-medium tracking-[0.36px]  pb-[70px] text-lg md:text-[24px]">
@@ -121,9 +121,9 @@ function HeroSection() {
         </motion.button>
         <Stars
           containerStyle="absolute left-10 lg:left-0 bottom-16 left-0"
-          bigStarStyle="absolute top-8 left-0 w-[47.016px] h-[59.838px]"
-          topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px]"
-          bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px]"
+          bigStarStyle="absolute top-8 left-0 w-[47.016px] h-[59.838px] animate-bounce"
+          topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px] animate-bounce"
+          bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px] animate-bounce"
         />
       </div>
       {/* @ts-ignore */}

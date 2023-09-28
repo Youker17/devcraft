@@ -29,8 +29,8 @@ function Contact() {
       </h1>
       <Stars
           containerStyle="hidden lg:flex absolute top-36  right-48"
-          bigStarStyle=" left-0 w-[71px] h-[92.548px]"
-          topLeftStarStyle="w-[20.655px] h-[24.459px] top-0 absolute"
+          bigStarStyle=" left-0 w-[71px] h-[92.548px] animate-bounce"
+          topLeftStarStyle="w-[20.655px] h-[24.459px] top-0 absolute animate-bounce"
           bottomLeftStarStyle="hidden"
         />
       <p className="lg:w-[1063px] mx-5 text-center text-primary opacity-70 leading-normal pt-[63px] font-medium tracking-[0.36px]  pb-[70px] text-lg md:text-[24px]">
@@ -65,7 +65,7 @@ function Contact() {
             onChange={InputHandler}
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder=""
             className=" px-5  h-[50px] md:px-9 rounded-[5px] border-2 border-black w-full bg-primary/20"
             label="Full Name"
             inputContainerStyle="pb-[26px]"
@@ -74,7 +74,7 @@ function Contact() {
             onChange={InputHandler}
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder=""
             className=" h-[50px] px-5 md:px-9 rounded-[5px] border-2 border-black bg-primary/20 w-full"
             label="Email"
             inputContainerStyle="pb-[26px]"
@@ -84,7 +84,7 @@ function Contact() {
          <label className="text-[20px]  font-semibold leading-[144.5%] tracking-[0.3px] text-white   ">Message</label>
             <textarea
             name="message"
-            placeholder="Message"
+            placeholder=""
             onChange={InputHandler}
             className=" overflow-hidden resize-none bg-primary/20  pb-56 px-9 mt-6 pt-4 rounded-[5px] border-2 border-black w-full  "
           ></textarea>

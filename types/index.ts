@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { ReactElement } from "react";
 
 
@@ -40,4 +41,22 @@ export type InputProps = {
     email: string;
     msj: string;
   };
+
+
+
+  export type planDataType = {
+    price:string,
+        plan:string,
+        planDescription:string,
+        features:string[],
+        popular:boolean
+  }
+
+
+  export type testimonialDataType = {
+    img: StaticImageData,
+    author: string,
+    rate: number,
+    testimony:string
+  }
   
