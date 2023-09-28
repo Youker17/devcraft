@@ -1,3 +1,4 @@
+import Features from "@/components/landing/Features";
 import HeroSection from "@/components/landing/HeroSection";
 import Work from "@/components/landing/Work";
 
