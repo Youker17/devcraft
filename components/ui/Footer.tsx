@@ -11,7 +11,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className=" flex justify-center items-center flex-col py-[100px]">
+    <div className="flex justify-center  items-center flex-col lg:py-[100px]">
       <Link href={"#"} className="">
         <div className="">
           <h1 className="text-5xl  font-bold drop-shadow-lg ">
@@ -22,7 +22,7 @@ export default function Footer() {
           </p>
         </div>
       </Link>
-      <p className="text-white text-[17px] font-normal tracking-[-0.232px] opacity-50 text-center w-[382px] pt-[23px] ">
+      <p className="text-white  text-[17px] font-normal tracking-[-0.232px] opacity-50 text-center w-full lg:w-[382px] pt-[23px] ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt.
       </p>

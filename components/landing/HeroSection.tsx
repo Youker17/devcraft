@@ -1,11 +1,8 @@
-import { Company } from "@/assets/Icons";
 import img__effect from "@/assets/dedring1.png";
 import hero__img from "@/assets/gradient.png";
 import { Variants, motion } from "framer-motion";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Stars from "../ui/Stars";
 
 function HeroSection() {
@@ -47,7 +44,7 @@ function HeroSection() {
   };
 
   return (
-    <div className="w-full h-screen  top-0 left-0   flex flex-col items-center text-center  ">
+    <div className="w-full h-screen overflow-hidden top-0 left-0   flex flex-col items-center text-center  ">
       <Image
         src={hero__img}
         className="w-full h-full absolute z-10"
@@ -68,7 +65,7 @@ function HeroSection() {
           bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px] animate-bounce"
         />
         <h1 className=' z-30 drop-shadow-[0px_4px_50px_#231D4F] w-full lg:w-[906px] mono  pt-[84px] text-[65px] font-extrabold overflow-visible   tracking-[2px] leading-[144.5%] '>
-          <div className='w-full text-3xl lg:text-7xl gap-2 mx-auto overflow-visible justify-center'>
+          <div className='w-full text-2xl lg:text-7xl gap-2 mx-auto overflow-visible justify-center'>
             <p className=' '>
               Not Just Websites
             </p>
@@ -90,7 +87,7 @@ function HeroSection() {
           topLeftStarStyle="absolute  top-0  left-0 w-[16.669px] h-[21.371px] animate-bounce"
           bottomLeftStarStyle=" hidden"
         />
-        <p className="md:w-[777px] mx-5 text-primary opacity-70 leading-normal pt-[17px] font-medium tracking-[0.36px]  pb-[70px] text-sm md:text-[24px]">
+        <p className="md:w-[777px] mx-5 text-primary opacity-70 leading-normal lg:pt-[17px] font-medium tracking-[0.36px]  pb-[70px] text-xs md:text-[24px]">
           WebCraft is where your digital dreams come to life. Innovation meets
           expertise as we craft exceptional online experiences that elevate your
           brand.
@@ -123,7 +120,7 @@ function HeroSection() {
             <Company key={i} />
           ))}
       </div> */}
-      <Swiper
+      {/* <Swiper
         spaceBetween={50}
         height={500}
         navigation={false}
@@ -155,7 +152,7 @@ function HeroSection() {
               <Company />
             </SwiperSlide>
           ))}
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 }

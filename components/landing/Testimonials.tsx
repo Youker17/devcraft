@@ -26,38 +26,62 @@ function Testimonials() {
         topLeftStarStyle="hidden"
         bottomLeftStarStyle="hidden"
       />
-      <Swiper
-        // spaceBetween={10}
-        height={500}
-        navigation={false}
-        loop={true}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="w-full"
-        breakpoints={{
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 210,
-          },
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 410,
-          },
-          // when window width is >= 1024px
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 410,
-          },
-        }}
-      >
-        {testimonialsData.map((e: testimonialDataType, i: number) => (
-          <SwiperSlide key={i} className=" w-full pt-[133px]">
-            <Testimony {...testimonialsData[i]} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="container mx-auto">
+
+        <div className="lg:flex hidden">
+
+          <Swiper
+            spaceBetween={1}
+            height={500}
+            navigation={false}
+            slidesPerView={3}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className=""
+            breakpoints={{
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 50,
+              },
+              // when window width is >= 768px
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+              // when window width is >= 1024px
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+          >
+            {testimonialsData.map((e: testimonialDataType, i: number) => (
+              <SwiperSlide key={i} className="w-full pt-[133px]">
+                <Testimony {...testimonialsData[i]} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className="flex mx-auto  lg:hidden" >
+          <Swiper
+            spaceBetween={50}
+            height={500}
+            navigation={false}
+            slidesPerView={1}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="flex lg:hidden"
+          >
+            {testimonialsData.map((e: testimonialDataType, i: number) => (
+              <SwiperSlide key={i} className="w-full pt-[133px]">
+                <Testimony {...testimonialsData[i]} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
       <Stars
         containerStyle="absolute bottom-32 left-20 lg:left-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
         bigStarStyle="absolute top-8 left-0 w-[128px] h-[149px] opacity-20 "

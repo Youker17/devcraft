@@ -32,4 +32,5 @@ export const testimonialsData:testimonialDataType[] = [
     testimony:
       " “Ut tristique viverra sed porttitor senectus. A facilisis metus pretium ut habitant lorem. Velit vel bibendum eget aliquet sem nec, id sed. Tincidunt.” ",
   },
+  
 ];
