@@ -42,14 +42,14 @@ function Contact() {
       </p>
 
       <div className="flex w-full px-[30px] sm:px-[70px] xl:px-[103px] mb-[103px] gap-6  lg:flex-row flex-col-reverse">
-        <div className="lg:w-3/6 relative flex justify-center items-center lg:justify-start lg:items-end pb-8 sm:pl-3 xl:pl-8 h-[468px] lg:h-auto">
+        <div className="lg:w-3/6 relative flex justify-center  items-center lg:justify-start lg:items-end pb-8 sm:pl-3 xl:pl-8 xs:h-[468px] lg:h-auto">
           <Image
             src={contact__img}
             alt="contact_img"
             className="w-full h-full absolute top-0 left-0 "
             draggable="false"
           />
-          <div className="w-auto xs:w-[370px] sm:w-[400px] xl:w-[411px] lg:h-3/6 mx-2  xs:mx-auto lg:mx-px bg-primary/25 gap-y-[30px] flex flex-col  backdrop-blur-md rounded-md py-[25px]  lg:py-4 px-4">
+          <div className="w-auto xs:w-[370px] sm:w-[400px] mt-7 h-auto xl:w-[411px] lg:h-3/6 mx-2  xs:mx-auto lg:mx-px bg-primary/25 gap-y-[30px] flex flex-col  backdrop-blur-md rounded-md py-[25px]  lg:py-4 px-4">
             {contactData.map((e: ContactDataType, i: number) => (
               <div key={i} className="flex  gap-6  xs:gap-10 items-center">
                  <e.icon />
