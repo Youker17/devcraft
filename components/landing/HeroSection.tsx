@@ -1,4 +1,4 @@
-import { ArrowDown, Company } from "@/assets/Icons";
+import { Company } from "@/assets/Icons";
 import img__effect from "@/assets/dedring1.png";
 import hero__img from "@/assets/gradient.png";
 import { Variants, motion } from "framer-motion";
@@ -67,28 +67,16 @@ function HeroSection() {
           topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px] animate-bounce"
           bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px] animate-bounce"
         />
-        <h1 className=" z-30  drop-shadow-[0px_4px_50px_#231D4F] w-auto xl:w-[906px] mono  pt-[84px] text-4xl sm:text-5xl md:text-[65px] font-extrabold overflow-visible   tracking-[2px] leading-[144.5%] ">
-          <div className="w-full flex flex-row gap-2 mx-auto overflow-visible justify-center">
-            Crafting
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-white lg:w-1/2 overflow-visible  flex flex-row w-auto ">
-              <TypeAnimation
-                className="overflow-visible"
-                sequence={[
-                  "Experiences,",
-                  4000,
-                  "Artpieces,",
-                  4000,
-                  "identities,",
-                  4000,
-                ]}
-                cursor={true}
-                repeat={Infinity}
-                wrapper="div"
-              />
-            </span>
-            <br />
+        <h1 className=' z-30 drop-shadow-[0px_4px_50px_#231D4F] w-full lg:w-[906px] mono  pt-[84px] text-[65px] font-extrabold overflow-visible   tracking-[2px] leading-[144.5%] '>
+          <div className='w-full text-3xl lg:text-7xl gap-2 mx-auto overflow-visible justify-center'>
+            <p className=' '>
+              Not Just Websites
+            </p>
+            <div className='flex flex-row mx-auto justify-center items-center'>
+              Crafting <span className='text-transparent'>-</span>
+              <TypeAnimation className='overflow-visible text-transparent bg-gradient-to-r from-tertinary to-white bg-clip-text' sequence={[' Experiences', 4000, ' Artpieces', 4000, ' identities', 4000]} cursor={true} repeat={Infinity} wrapper="span" />
+            </div>
           </div>
-          Not Just Websites
         </h1>
         <Stars
           containerStyle="self-start ml-20 "
@@ -102,22 +90,18 @@ function HeroSection() {
           topLeftStarStyle="absolute  top-0  left-0 w-[16.669px] h-[21.371px] animate-bounce"
           bottomLeftStarStyle=" hidden"
         />
-        <p className="md:w-[777px] mx-5 text-primary opacity-70 leading-normal pt-[17px] font-medium tracking-[0.36px]  pb-[70px] text-lg md:text-[24px]">
+        <p className="md:w-[777px] mx-5 text-primary opacity-70 leading-normal pt-[17px] font-medium tracking-[0.36px]  pb-[70px] text-sm md:text-[24px]">
           WebCraft is where your digital dreams come to life. Innovation meets
           expertise as we craft exceptional online experiences that elevate your
           brand.
         </p>
-        <motion.button
-          initial="initial"
-          variants={BtnAnimation}
-          animate="animate"
-          whileHover={"hover"}
-          exit={"exit"}
-          className="relative overflow-hidden justify-center flex-row w-[251px] flex rounded-[4px] text-background text-lg font-bold leading-normal shadow-buttonShadow hover:shadow-buttonShadowHover py-[16px] cursor-pointer bg-tertinary"
-        >
-          Explore Plans
-          <div></div>
-          <ArrowDown style="absolute  -top-20" variants={ArrowAnimation} />
+        <motion.button className='relative hover:scale-110 transition-all duration-300 overflow-hidden group justify-center flex-row w-[251px] flex rounded-[4px] text-background text-lg font-bold leading-normal shadow-buttonShadow hover:shadow-buttonShadowHover py-[16px] cursor-pointer bg-tertinary'>
+          <div className=' mr-3 w-fit group-hover:-translate-x-5 transition-all transform'>
+            Explore Plans
+          </div>
+          <svg className="w-4 h-4 absolute right-10 text-background duration-300 -translate-y-96 group-hover:translate-y-2 transition-all " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+          </svg>
         </motion.button>
         <Stars
           containerStyle="absolute left-10 lg:left-0 bottom-16 left-0"

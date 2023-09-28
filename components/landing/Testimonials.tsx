@@ -27,9 +27,10 @@ function Testimonials() {
         bottomLeftStarStyle="hidden"
       />
       <Swiper
-        spaceBetween={50}
+        // spaceBetween={10}
         height={500}
         navigation={false}
+        loop={true}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         modules={[Autoplay, Pagination, Navigation]}
         className="w-full"

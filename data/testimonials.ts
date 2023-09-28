@@ -25,4 +25,11 @@ export const testimonialsData:testimonialDataType[] = [
     testimony:
       " “Ut tristique viverra sed porttitor senectus. A facilisis metus pretium ut habitant lorem. Velit vel bibendum eget aliquet sem nec, id sed. Tincidunt.” ",
   },
+  {
+    img: img3,
+    author: "Trevor Mitchell",
+    rate: 3,
+    testimony:
+      " “Ut tristique viverra sed porttitor senectus. A facilisis metus pretium ut habitant lorem. Velit vel bibendum eget aliquet sem nec, id sed. Tincidunt.” ",
+  },
 ];
