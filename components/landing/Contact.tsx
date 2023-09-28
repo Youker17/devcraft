@@ -28,11 +28,11 @@ function Contact() {
         Connect with us today
       </h1>
       <Stars
-          containerStyle="hidden lg:flex absolute top-36  right-48"
-          bigStarStyle=" left-0 w-[71px] h-[92.548px] animate-bounce"
-          topLeftStarStyle="w-[20.655px] h-[24.459px] top-0 absolute animate-bounce"
-          bottomLeftStarStyle="hidden"
-        />
+        containerStyle="hidden lg:flex absolute top-36  right-48"
+        bigStarStyle=" left-0 w-[71px] h-[92.548px] animate-bounce"
+        topLeftStarStyle="w-[20.655px] h-[24.459px] top-0 absolute animate-bounce"
+        bottomLeftStarStyle="hidden"
+      />
       <p className="lg:w-[1063px] mx-5 text-center text-primary opacity-70 leading-normal pt-[63px] font-medium tracking-[0.36px]  pb-[70px] text-lg md:text-[24px]">
         WebCraft is where your digital dreams come to life. Innovation meets
         expertise as we craft exceptional online experiences that elevate your
@@ -49,11 +49,11 @@ function Contact() {
             className="w-full h-full absolute top-0 left-0 "
             draggable="false"
           />
-          <div className=" w-[400px] xl:w-[411px] lg:h-3/6  mx-auto lg:mx-px bg-primary/25 gap-y-[30px] flex flex-col  backdrop-blur-md rounded-md py-[25px]  lg:py-4 px-4">
+          <div className="w-auto xs:w-[370px] sm:w-[400px] xl:w-[411px] lg:h-3/6 mx-2  xs:mx-auto lg:mx-px bg-primary/25 gap-y-[30px] flex flex-col  backdrop-blur-md rounded-md py-[25px]  lg:py-4 px-4">
             {contactData.map((e: ContactDataType, i: number) => (
-              <div key={i} className="flex   gap-10 items-center">
-                <e.icon />
-                <p className=" text-[18px] text-background  font-bold  leading-normal tracking-[0.27px]">
+              <div key={i} className="flex  gap-6  xs:gap-10 items-center">
+                 <e.icon />
+                <p className="text-[14px] xs:text-[18px] text-background  font-bold  leading-normal tracking-[0.27px]">
                   {e.text}
                 </p>
               </div>
@@ -78,17 +78,17 @@ function Contact() {
             className=" h-[50px] px-5 md:px-9 rounded-[5px] border-2 border-black bg-primary/20 w-full"
             label="Email"
             inputContainerStyle="pb-[26px]"
-            
+
           />
-         <div className=" w-full">
-         <label className="text-[20px]  font-semibold leading-[144.5%] tracking-[0.3px] text-white   ">Message</label>
+          <div className=" w-full">
+            <label className="text-[20px]  font-semibold leading-[144.5%] tracking-[0.3px] text-white   ">Message</label>
             <textarea
-            name="message"
-            placeholder=""
-            onChange={InputHandler}
-            className=" overflow-hidden resize-none bg-primary/20  pb-56 px-9 mt-6 pt-4 rounded-[5px] border-2 border-black w-full  "
-          ></textarea>
-         </div>
+              name="message"
+              placeholder=""
+              onChange={InputHandler}
+              className=" overflow-hidden resize-none bg-primary/20  pb-56 px-9 mt-6 pt-4 rounded-[5px] border-2 border-black w-full  "
+            ></textarea>
+          </div>
         </div>
       </div>
     </div>

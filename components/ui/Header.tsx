@@ -65,15 +65,15 @@ export default function Header() {
           }
           transition={{ duration: 0.5, ease: "easeInOut" }}
           exit={{ height: "132px", backgroundColor: "#fff" }}
-          className=" md:mx-[37px] md:my-[23px] h-[132px] relative w-full bg-primary/25  backdrop-blur-sm rounded-lg lg:flex lg:flex-row overflow-hidden  md:justify-between px-8 md:px-16 flex-col gap-y-10 md:gap-y-10  xl:block "
+          className=" md:mx-[37px] md:my-[23px] h-[100px] xs:h-[132px] relative w-full bg-primary/25  backdrop-blur-sm rounded-lg lg:flex lg:flex-row overflow-hidden  md:justify-between px-8 md:px-16 flex-col gap-y-10 md:gap-y-10  xl:block "
         >
-          <div className="flex-row flex w-full  lg:w-auto justify-between items-center mt-8 lg:mt-0 ">
+          <div className="flex-row flex w-full  lg:w-auto justify-between items-center mt-4 xs:mt-8 lg:mt-0 ">
             <Link href={"#"} className=" xl:hidden">
               <div className="">
-                <h1 className="text-5xl  font-bold drop-shadow-lg ">
+                <h1 className="text-4xl xs:text-5xl  font-bold drop-shadow-lg ">
                   <span className=" text-tertinary ">Dev</span>Craft
                 </h1>
-                <p className="text-sm leading-normal tracking-[7.75px]">
+                <p className="text-sm leading-normal tracking-[4.2px] xs:tracking-[7.75px]">
                   Devcraft studio
                 </p>
               </div>

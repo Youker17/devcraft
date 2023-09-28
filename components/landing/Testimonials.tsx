@@ -9,7 +9,7 @@ function Testimonials() {
   return (
     <div className="flex flex-col justify-center items-center relative">
       <Stars
-        containerStyle="absolute top-0 left-20 lg:left-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
+        containerStyle="hidden sm:flex absolute top-0 left-20 lg:left-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
         bigStarStyle="absolute top-8 left-0 w-[128px] h-[149px] opacity-20 "
         topLeftStarStyle="absolute top-8 left-20 w-[47px] h-[51px] opacity-70"
         bottomLeftStarStyle="hidden"
@@ -37,13 +37,13 @@ function Testimonials() {
         breakpoints={{
           // when window width is >= 640px
           640: {
-            slidesPerView: 1,
-            spaceBetween: 210,
+            slidesPerView:2,
+            spaceBetween: 350,
           },
           // when window width is >= 768px
           768: {
             slidesPerView: 2,
-            spaceBetween: 410,
+            spaceBetween: 350,
           },
           // when window width is >= 1024px
           1024: {
@@ -53,7 +53,7 @@ function Testimonials() {
         }}
       >
         {testimonialsData.map((e: testimonialDataType, i: number) => (
-          <SwiperSlide key={i} className=" w-full pt-[133px]">
+          <SwiperSlide key={i} className=" w-full pt-[133px] ">
             <Testimony {...testimonialsData[i]} />
           </SwiperSlide>
         ))}
@@ -64,7 +64,7 @@ function Testimonials() {
         topLeftStarStyle="absolute top-8 left-20 w-[47px] h-[51px] opacity-70"
         bottomLeftStarStyle="hidden"
       />
-      <button className=" text-background bg-tertinary w-fit font-bold text-[16px] uppercase leading-[150%] py-[16px] px-[24px] mt-[111px] rounded-[5px]">
+      <button className=" text-background cursor-pointer z-20 bg-tertinary w-fit font-bold text-[16px] uppercase leading-[150%] py-[16px] px-[24px] mt-[111px] rounded-[5px]">
         Get a quote
       </button>
     </div>
