@@ -45,17 +45,8 @@ export default function Header() {
   return (
     <>
       <motion.div
-        initial={{
-          translateY: -100,
-        }}
-        animate={{
-          translateY: direction === "down" ? 0 : -200,
-        }}
-        transition={{
-          duration: 0.5,
-          ease: "easeInOut",
-        }}
-        className=" flex fixed w-full z-[100]  "
+
+        className=" hidden md:flex absolute w-full z-[100]  "
       >
         {/* */}
         <motion.nav

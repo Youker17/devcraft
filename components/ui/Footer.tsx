@@ -22,13 +22,13 @@ export default function Footer() {
           </p>
         </div>
       </Link>
-      <p className="text-white  text-[17px] font-normal tracking-[-0.232px] opacity-50 text-center w-full lg:w-[382px] pt-[23px] ">
+      <p className="text-white  text-[17px] font-normal tracking-[-0.232px] opacity-50 text-center w-full  lg:w-[382px] pt-[23px] ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt.
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 justify-center items-center gap-y-[18px]  lg:grid-cols-6 gap-x-[59px] py-[60px]">
         {footerLinks.map((e: string, i: number) => (
-          <Link key={i} href={"#"} className="  justify-self-center">
+          <Link key={i} href={"#"} className="justify-self-center">
             {e}
           </Link>
         ))}

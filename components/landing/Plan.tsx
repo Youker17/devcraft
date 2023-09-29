@@ -4,7 +4,7 @@ import { planDataType } from "@/types";
 
 function Plan() {
   return (
-    <div className="xl:h-[1212px] bg-primary w-full py-[65px] flex flex-col items-center ">
+    <div id='plans' className="xl:h-[1212px] bg-primary w-full py-[65px] flex flex-col items-center ">
       <p className=" text-center text-sm md:text-[16px] font-normal  leading-normal uppercase tracking-[0.48px] text-background">
         Plans
       </p>
@@ -27,8 +27,8 @@ function Plan() {
         </div>
       </div>
 
-      <div className=" flex-row  xl:w-[1128.961px] lg:h-[562.673px] bg-secondary mt-[141px] flex py-[48px] px-[53px] gap-8 rounded-[10px]">
-        {planData.map((e:planDataType, i: number) => (
+      <div className=" flex-row  xl:w-[1128.961px] lg:h-[562.673px] bg-secondary mt-10 flex py-[48px] px-[53px] gap-8 rounded-[10px]">
+        {planData.map((e: planDataType, i: number) => (
           <div key={i} className="w-2/6 flex flex-col justify-between">
             <div>
               <p className="text-background text-[36px] font-bold leading-[46px]">

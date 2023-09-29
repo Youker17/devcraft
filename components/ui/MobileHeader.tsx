@@ -55,17 +55,17 @@ export default function MobileHeader() {
           duration: 0.5,
           ease: "easeInOut",
         }}
-        className="flex md:hidden absolute w-full z-[100]  "
+        className="flex md:hidden absolute w-full z-[100]"
       >
         {/* */}
         <motion.nav
           initial={{}}
           animate={
-            open   ? { height: "90vh", backgroundColor: "#0f172a" , margin:0} : undefined
+            open ? { height: "90vh", backgroundColor: "#0f172a", margin: 0 } : undefined
           }
           transition={{ duration: 0.5, ease: "easeInOut" }}
           exit={{ height: "250px", backgroundColor: "#fff" }}
-          className="  relative w-full   backdrop-blur-sm rounded-lg h-46   overflow-hidden   px-8  flex-col gap-y-10  "
+          className="  relative w-full   b rounded-lg h-46   overflow-hidden   px-8  flex-col gap-y-10  "
         >
           <div className="flex-col flex w-full  items-center mt-4 xs:mt-8  gap-6 ">
             <Link href={"#"} className=" xl:hidden">
