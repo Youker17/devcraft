@@ -12,7 +12,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
             {/* <Loader /> */}
             <MobileHeader />
             <Header />
-            <Map />
+            {/* <Map /> */}
             {children}
             <Footer />
         </div>

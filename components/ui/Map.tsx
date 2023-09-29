@@ -45,13 +45,13 @@ function Map() {
 
 
   return (
-    <div className='hidden lg:flex flex-col justify-center items-center gap-[2px] z-50 fixed w-auto  right-5 top-[40%]  '>
+    <div className='hidden lg:flex flex-row justify-center items-center gap-[2px] z-50 my-6 w-auto  right-5 top-[40%]  '>
       <motion.div onClick={e => navigate(1)} initial={inactive} animate={inView === 1 || inView === 0 ? active : inactive} className=' w-[28px] h-[28px]  flex justify-center items-center font-extrabold  cursor-pointer  rounded-full'>1</motion.div>
-      <motion.div className=' h-10 w-[2px] bg-tertinary'></motion.div>
+      <motion.div className=' h-[1px] w-10 bg-tertinary'></motion.div>
       <motion.div onClick={e => navigate(2)} initial={inactive} animate={inView === 2 ? active : inactive} className=' w-[28px] h-[28px]  flex justify-center items-center font-extrabold  cursor-pointer  rounded-full'>2</motion.div>
-      <motion.div className=' h-10 w-[2px] bg-tertinary'></motion.div>
+      <motion.div className='  h-[1px] w-10 bg-tertinary'></motion.div>
       <motion.div onClick={e => navigate(3)} initial={inactive} animate={inView === 3 ? active : inactive} className=' w-[28px] h-[28px]  flex justify-center items-center font-extrabold  cursor-pointer  rounded-full'>3</motion.div>
-      <motion.div className=' h-10 w-[2px] bg-tertinary'></motion.div>
+      <motion.div className='  h-[1px] w-10 bg-tertinary'></motion.div>
       <motion.div onClick={e => navigate(4)} initial={inactive} animate={inView === 4 ? active : inactive} className=' w-[28px] h-[28px]  flex justify-center items-center font-extrabold  cursor-pointer  rounded-full'>4</motion.div>
     </div>
   )
