@@ -38,6 +38,7 @@ const config: Config = {
         buttonShadow: "0px 2px 65px 0px #EEBBC3",
         buttonShadowHover:
           "0px 2px 65px 0px #EEBBC3, 0px 0px 20px 5px #EEBBC3 ",
+        planShadow:"0px 42px 34px 0px rgba(82, 67, 194, 0.30)"  ,
         linksShadow: "inset 300px 0 0 0 #54b3d6",
         starShadow: "0px 4px 50px #EEBBC3",
       },

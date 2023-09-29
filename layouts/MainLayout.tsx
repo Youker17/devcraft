@@ -14,7 +14,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                 <MobileHeader />
             </div>
             <Header />
-            <Map />
+            {/* <Map /> */}
             {children}
             <Footer />
         </div>
