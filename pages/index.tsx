@@ -1,6 +1,7 @@
 import Contact from "@/components/landing/Contact";
 import Features from "@/components/landing/Features";
 import HeroSection from "@/components/landing/HeroSection";
+import Plan from "@/components/landing/Plan";
 import Testimonials from "@/components/landing/Testimonials";
 import Work from "@/components/landing/Work";
 
@@ -12,7 +13,7 @@ export default function Home() {
       <HeroSection />
       <Features />
       <Work />
-      {/* <Plan /> */}
+      <Plan />
       <Testimonials />
       <Contact />
     </div>

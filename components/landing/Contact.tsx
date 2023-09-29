@@ -49,10 +49,10 @@ function Contact() {
             className="w-full h-full absolute top-0 left-0 "
             draggable="false"
           />
-          <div className="w-auto xs:w-[370px] sm:w-[400px] mt-7 h-auto xl:w-[411px] lg:h-3/6 mx-2  xs:mx-auto lg:mx-px bg-primary/25 gap-y-[30px] flex flex-col  backdrop-blur-md rounded-md py-[25px]  lg:py-4 px-4">
+          <div className="w-auto xs:w-[370px] sm:w-[400px] mt-7 h-auto xl:w-[411px]  mx-2  xs:mx-auto lg:mx-px bg-primary/25 gap-y-[30px] flex flex-col  backdrop-blur-md rounded-md py-[25px]  lg:py-4 px-4">
             {contactData.map((e: ContactDataType, i: number) => (
               <div key={i} className="flex  gap-6  xs:gap-10 items-center">
-                 <e.icon />
+                <e.icon />
                 <p className="text-[14px] xs:text-[18px] text-background  font-bold  leading-normal tracking-[0.27px]">
                   {e.text}
                 </p>
@@ -81,14 +81,17 @@ function Contact() {
 
           />
           <div className=" w-full">
-            <label className="text-[20px]  font-semibold leading-[144.5%] tracking-[0.3px] text-white   ">Message</label>
+            <label className="text-[0.9rem] md:text-[20px]  font-semibold leading-[144.5%] tracking-[0.3px] text-white   ">Message</label>
             <textarea
               name="message"
               placeholder=""
               onChange={InputHandler}
-              className=" overflow-hidden resize-none bg-primary/20  pb-56 px-9 mt-6 pt-4 rounded-[5px] border-2 border-black w-full  "
+              className=" overflow-hidden resize-none bg-primary/20 h-40 px-9 mt-2 md:mt-6 pt-4 rounded-[5px] border-2 border-black w-full  "
             ></textarea>
           </div>
+          <button className=" text-background cursor-pointer z-20 mt-4 w-full bg-tertinary hover:bg-tertinary/90 font-bold text-[16px] uppercase leading-[150%] py-[16px] px-[24px] rounded-[5px]">
+            SEND MESSAGE
+          </button>
         </div>
       </div>
     </div>
