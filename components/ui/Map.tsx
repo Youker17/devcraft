@@ -38,6 +38,11 @@ function Map() {
       setInView(currentView)
     })
 
+    return () => {
+      window.removeEventListener('scroll', () => { })
+    }
+
+
   }, [inView])
 
 
