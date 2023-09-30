@@ -162,7 +162,7 @@ export default function Work() {
                     modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay]}
                 >
                     {
-                        projects.map((project, i) => <SwiperSlide key={i} onClick={e => togglePopper(project)} className="bg-primary w-40 h-52 group rounded-xl overflow-hidden">
+                        projects.map((project, i) => <SwiperSlide key={i} onClick={e => togglePopper(project)} className="bg-primary  w-40 h-52 group rounded-xl overflow-hidden">
                             {/* <div className="group-hover:opacity-100 opacity-0 transition-all duration-200 flex-col p-10 justify-end  flex bg-gradient-to-t from-black text-white to-black/0 h-full absolute z-10 bottom-0 w-full">
                                 <div className="flex flex-col gap-3">
                                     <h2 className="bg-gradient-to-r from-tertinary to-white bg-clip-text text-4xl text-transparent w-fit font-bold">{project.title}</h2>
@@ -178,7 +178,7 @@ export default function Work() {
                                     </div>
                                 </div>
                             </div> */}
-                            <img src={project.image} className="object-cover group-hover:scale-125 transition-all duration-300 w-full h-full" alt="" />
+                            <img src={project.image} className="object-cover cur  group-hover:scale-125 transition-all duration-300 w-full h-full" alt="" />
                         </SwiperSlide>)
 
                     }

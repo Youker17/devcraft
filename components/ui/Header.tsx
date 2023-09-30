@@ -1,4 +1,5 @@
 "use client";
+import call from "@/assets/call.gif";
 import { motion } from "framer-motion";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
@@ -83,15 +84,15 @@ export default function Header() {
               "justify-around absolute lg:static mt-20  w-full lg:w-auto  lg:flex-row lg:items-center  text-2xl lg:h-full flex-col flex gap-20    lg:gap-6  lg:mt-0"
             )}
           >
-            <Link href={"#"}>
+            <Link href={"/#about"}>
               <motion.li className="xl:tracking-[4.41px]  duration-300 py-4 w-[85%] lg:w-full px-4 rounded-lg  ">
                 About
               </motion.li>
             </Link>
-            <Link href={"#"}>
+            <Link href={"/#work"}>
               <li className="xl:tracking-[4.41px]">Our Work</li>
             </Link>
-            <Link href={"#"} className="hidden xl:block">
+            <Link href={"/#hero"} className="hidden xl:block">
               <li className="">
                 <h1 className="text-5xl  font-bold drop-shadow-lg ">
                   <span className=" text-tertinary ">Dev</span>Craft
@@ -101,12 +102,15 @@ export default function Header() {
                 </p>
               </li>
             </Link>
-            <Link href={"#"}>
+            <Link href={"/#plans"}>
               <li className="xl:tracking-[4.41px]">Pricing</li>
             </Link>
-            <Link href={"#"}>
-              <button className=" bg-tertinary px-[32px] py-[10px] text-black font-semibold leading-normal text-lg  rounded-[4px] ">
-                Book a call
+            <Link href={"/booking"}>
+              <button className=" flex flex-row group overflow-hidden hover:shadow-2xl hover:shadow-tertinary transform ease-in-out hover:scale-105 bg-tertinary px-[32px] py-[10px] text-black font-semibold leading-normal text-lg  rounded-[4px] ">
+                <p className="group-hover:-translate-x-3 translate-x-2 transition-all ">
+                  Book a call
+                </p>
+                <img src={call.src} className="w-5 aspect-square transition-all translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100" alt="" />
               </button>
             </Link>
           </motion.ul>

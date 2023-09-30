@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  cursor: url(./cursor.png) 5 5, auto;
+}
 
 body {
   font-family: 'Inter', sans-serif;
