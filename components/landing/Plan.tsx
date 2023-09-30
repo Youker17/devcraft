@@ -1,6 +1,7 @@
 import { PlanCheck } from "@/assets/Icons";
 import { planData } from "@/data/plans";
 import { planDataType } from "@/types";
+import ThemeToggle from "../ui/Toggler";
 // import Toggle from "../ui/Toggle";
 
 function Plan() {
@@ -27,11 +28,14 @@ function Plan() {
           <Web />
         </div>
       </div> */}
+      {/* <div className="absolute right-[10vw] top-12 md:static">
+        <ThemeToggle />
 
+      </div> */}
       {/* <Toggle /> */}
 
       <div className=" flex-col xl:flex-row relative h-auto xl:h-[70vh] bg-transparent xl:bg-secondary mx-4 mt-[2rem] md:mt-[4.85rem] flex py-[3rem] px-[3.2rem] gap-8 rounded-[10px]">
-      <div className="flex flex-col md:flex-row md:bg-secondary xl:bg-transparent md:py-[3rem] md:px-[3.2rem] xl:py-0 xl:px-0 rounded-[10px] gap-8 md:h-[70vh] xl:h-auto">
+        <div className="flex flex-col md:flex-row md:bg-secondary xl:bg-transparent md:py-[3rem] md:px-[3.2rem] xl:py-0 xl:px-0 rounded-[10px] gap-8 md:h-[70vh] xl:h-auto">
           {planData.slice(0, 2).map((e: planDataType, i: number) => (
             <div key={i} className="flex flex-col justify-between  bg-secondary md:bg-transparent py-[2rem] px-[1.5rem] xs:py-[3rem] xs:px-[2.7rem] md:py-0 md:px-0 rounded-[10px] h-[70vh] md:h-auto gap-8">
               <div>
