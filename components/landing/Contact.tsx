@@ -20,7 +20,7 @@ function Contact() {
   };
 
   return (
-    <div className="py-[153px] w-full flex flex-col justify-center items-center relative">
+    <div id="contact" className="py-[153px] w-full flex flex-col justify-center items-center relative">
       <p className=" text-center text-sm md:text-[16px] font-normal  leading-normal uppercase tracking-[0.48px] text-primary">
         REACH OUT
       </p>
@@ -33,7 +33,7 @@ function Contact() {
         topLeftStarStyle="w-[20.655px] h-[24.459px] top-0 absolute animate-bounce"
         bottomLeftStarStyle="hidden"
       />
-      <p className="lg:w-[1063px] mx-5 text-center text-primary opacity-70 leading-normal pt-[63px] font-medium tracking-[0.36px]  pb-[70px] text-lg md:text-[24px]">
+      <p className="lg:w-[1063px] mx-5 text-center text-primary opacity-70 leading-normal pt-[63px] font-medium tracking-[0.36px]  pb-[70px] text-xs md:text-[24px]">
         WebCraft is where your digital dreams come to life. Innovation meets
         expertise as we craft exceptional online experiences that elevate your
         brand. WebCraft is where your digital dreams come to life. Innovation

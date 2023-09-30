@@ -1,9 +1,13 @@
+import { Company } from "@/assets/Icons";
 import img__effect from "@/assets/dedring1.png";
 import hero__img from "@/assets/gradient.png";
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Stars from "../ui/Stars";
+
 
 function HeroSection() {
   // const BtnAnimation: Variants = {
@@ -44,7 +48,7 @@ function HeroSection() {
   // };
 
   return (
-    <div className="w-full h-screen overflow-hidden top-0 left-0   flex flex-col items-center text-center  ">
+    <div id="hero" className="w-full  overflow-hidden top-0 left-0   flex flex-col items-center text-center  ">
       <Image
         src={hero__img}
         className="w-full h-full absolute z-10"
@@ -120,7 +124,7 @@ function HeroSection() {
             <Company key={i} />
           ))}
       </div> */}
-      {/* <Swiper
+      <Swiper
         spaceBetween={50}
         height={500}
         navigation={false}
@@ -152,7 +156,7 @@ function HeroSection() {
               <Company />
             </SwiperSlide>
           ))}
-      </Swiper> */}
+      </Swiper>
     </div>
   );
 }

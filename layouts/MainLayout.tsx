@@ -10,9 +10,11 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     return (
         <div className="">
             {/* <Loader /> */}
-            <MobileHeader />
+            <div className="flex lg:hidden">
+                <MobileHeader />
+            </div>
             <Header />
-            {/* <Map /> */}
+            <Map />
             {children}
             <Footer />
         </div>

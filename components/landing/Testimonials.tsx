@@ -7,7 +7,7 @@ import Testimony from "../ui/Testimony";
 
 function Testimonials() {
   return (
-    <div className="flex flex-col justify-center items-center relative">
+    <div id="testimonials" className="flex flex-col justify-center items-center relative">
       <Stars
         containerStyle="flex absolute -top-12 lg:top-0 left-0 lg:left-20 lg:left-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
         bigStarStyle="absolute top-0 left-0 w-20 h-20 lg:w-[128px] lg:h-[149px] opacity-20 "

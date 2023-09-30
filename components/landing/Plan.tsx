@@ -68,7 +68,7 @@ function Plan() {
         </div>
 
         {planData.slice(2, 3).map((e: planDataType, i: number) => (
-          <div key={i} className="flex flex-col justify-between w-fit relative bg-background py-4 px-10 h-[600px]  shadow-planShadow xl:-top-28 mx-auto xl:-left-[1vw] rounded-[10px]  pb-10  text-white ">
+          <div key={i} className="flex flex-col justify-between w-fit relative bg-background py-4 px-10 h-[600px] hover:translate-x-3 transition-all hover:translate-y-3  shadow-planShadow xl:-top-28 mx-auto xl:-left-[1vw] rounded-[10px]  pb-10  text-white ">
             <span className=" rounded-md text-tertinary bg-[#979797]/30 py-1 px-2 text-[0.65rem] leading-normal self-end tracking-[0.833px] w-fit  ">MOST POPULAR</span>
             <div className="mb-20">
               <p className=" text-[36px] font-bold leading-[46px] text-white">

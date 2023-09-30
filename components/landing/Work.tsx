@@ -119,7 +119,7 @@ export default function Work() {
     }, [])
 
     return (
-        <div className="h-screen relative flex flex-col justify-around items-center" >
+        <div id='work' className="h-screen relative flex flex-col justify-around items-center" >
             <div className="w-full flex flex-col gap-2 items-center">
                 <p className='text-center text-sm md:text-[16px] font-normal  leading-normal uppercase tracking-[0.48px] text-primary'> OUR WORK</p>
                 <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold leading-normal text-center'>Witness Excellence: Our Impressive Portfolio</h1>
@@ -188,11 +188,13 @@ export default function Work() {
             <div className="flex flex-row  w-full p-5 lg:container justify-between items-center container ">
                 <div className="flex flex-row gap-1 justify-center items-center  ">
                     {
-                        Array(mobile ? projects.length : paginationLength).fill("").map((_, i) => <div onClick={() => {
-                            // @ts-ignore
-                            swiperRef.current.swiper.slideTo(i)
-                            setPaginationState(i + 1)
-                        }} className={` cursor-pointer transition-all transform rounded-full ${paginationState === i + 1 ? "w-10 h-4 bg-gradient-to-r from-tertinary to-pink-400" : "w-4 aspect-square bg-primary/60"}`}></div>)
+                        Array(mobile ? projects.length : paginationLength).fill("").map((_, i) => <div
+                            key={i}
+                            onClick={() => {
+                                // @ts-ignore
+                                swiperRef.current.swiper.slideTo(i)
+                                setPaginationState(i + 1)
+                            }} className={` cursor-pointer transition-all transform rounded-full ${paginationState === i + 1 ? "w-10 h-4 bg-gradient-to-r from-tertinary to-pink-400" : "w-4 aspect-square bg-primary/60"}`}></div>)
                     }
                 </div>
                 <div className="flex flex-row gap-3 ">
@@ -215,7 +217,7 @@ export default function Work() {
 
                 {
                     popper &&
-                    <motion.div onClick={e => setPopper(false)} className="w-full bottom-0 h-full bg-black/50 backdrop-blur-sm absolute z-50 left-0 flex flex-row justify-center items-center">
+                    <motion.div onClick={e => setPopper(false)} className="w-full bottom-0 h-full  absolute z-50 left-0 flex flex-row justify-center items-center">
                         <motion.div initial={{ translateX: -500 }} onClick={e => e.stopPropagation()} animate={{ translateX: 0 }} exit={{ translateX: -500 }} transition={{ duration: .5, ease: "easeInOut" }} className="absolute z-50 left-0 h-[90%] p-10 rounded-r-xl backdrop-blur-3xl flex flex-col justify-between bg-tertinary w-3/4 lg:w-1/3">
                             <div className="w-full flex flex-row justify-between items-start">
                                 <h2 className="bg-gradient-to-r from-background to-slate-900 bg-clip-text text-4xl text-transparent w-fit font-bold">{popperData.title}</h2>
@@ -240,11 +242,11 @@ export default function Work() {
                 }
             </AnimatePresence>
             <Stars
-          containerStyle="absolute bottom-10 hideen right-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
-          bigStarStyle="absolute top-8 left-0 w-[47.016px] h-[59.838px] animate-bounce"
-          topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px] animate-bounce"
-          bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px] animate-bounce"
-        />
+                containerStyle="absolute bottom-10 hideen right-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
+                bigStarStyle="absolute top-8 left-0 w-[47.016px] h-[59.838px] animate-bounce"
+                topLeftStarStyle="absolute top-8 left-0 w-[16.669px] h-[21.371px] animate-bounce"
+                bottomLeftStarStyle="absolute top-[4.5rem]  w-[13.677px] h-[15.814px] animate-bounce"
+            />
         </div>
     )
 }

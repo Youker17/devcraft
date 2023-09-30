@@ -2,19 +2,15 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-
-
 const active = {
-  scale: 1.2,
-  backgroundOpacity: 1,
-  backgroundColor: "white",
+
   color: "black"
+
 }
 
 const inactive = {
-  backgroundOpacity: 0,
-  backgroundColor: "transparent",
-  color: "white"
+
+  color: "white",
 }
 
 
@@ -23,36 +19,51 @@ function Map() {
 
   const [inView, setInView] = useState<number>(1)
 
-  const navigate = (view: number) => {
 
-    window.scrollTo({
-      top: screenHeight * (view - 1) + (screenHeight * (view - 1) / 2),
-      behavior: 'smooth'
-    })
+
+  const navigate = (view: string) => {
+    const element = document.getElementById(view);
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
 
   useEffect(() => {
     setScreenHeight(window.innerHeight)
     window.addEventListener('scroll', () => {
-      const currentView = Math.ceil(window.scrollY / screenHeight)
+      const currentView = Math.ceil(window.scrollY / (screenHeight + 50))
       console.log(currentView)
       setInView(currentView)
     })
+
+    return () => {
+      window.removeEventListener('scroll', () => { })
+    }
+
 
   }, [inView])
 
 
 
   return (
-    <div className='hidden lg:flex flex-row justify-center items-center gap-[2px] z-50 my-6 w-auto  right-5 top-[40%]  '>
-      <motion.div onClick={e => navigate(1)} initial={inactive} animate={inView === 1 || inView === 0 ? active : inactive} className=' w-[28px] h-[28px]  flex justify-center items-center font-extrabold  cursor-pointer  rounded-full'>1</motion.div>
-      <motion.div className=' h-[1px] w-10 bg-tertinary'></motion.div>
-      <motion.div onClick={e => navigate(2)} initial={inactive} animate={inView === 2 ? active : inactive} className=' w-[28px] h-[28px]  flex justify-center items-center font-extrabold  cursor-pointer  rounded-full'>2</motion.div>
-      <motion.div className='  h-[1px] w-10 bg-tertinary'></motion.div>
-      <motion.div onClick={e => navigate(3)} initial={inactive} animate={inView === 3 ? active : inactive} className=' w-[28px] h-[28px]  flex justify-center items-center font-extrabold  cursor-pointer  rounded-full'>3</motion.div>
-      <motion.div className='  h-[1px] w-10 bg-tertinary'></motion.div>
-      <motion.div onClick={e => navigate(4)} initial={inactive} animate={inView === 4 ? active : inactive} className=' w-[28px] h-[28px]  flex justify-center items-center font-extrabold  cursor-pointer  rounded-full'>4</motion.div>
+    <div className='flex justify-center items-center w-2/4 left-1/4 z-50 fixed  bottom-2  '>
+      <motion.div initial={{ translateY: 120 }} animate={inView >= 2 && inView <= 6 ? { translateY: 0 } : { translateY: 120 }} className={'hidden lg:flex bg-primary/30 shadow-2xl shadow-black/25 backdrop-blur-xl p-4 rounded-[20px] flex-row justify-center items-center gap-[2px]   '}>
+        <div className='flex flex-row gap-2 font-bold relative text-sm '>
+          <motion.div animate={{ translateX: (6.5 * ((inView < 6 ? inView : 6) - 1)).toString() + "rem" }} className={`bg-primary absolute h-full w-24 rounded-[15px] `}></motion.div>
+          <motion.p onClick={e => navigate("hero")} className='py-5 z-30 group w-24 text-center hover:bg-background/80 transition-all cursor-pointer bg-background rounded-[15px] flex justify-center items-center'>
+            <svg className="w-4 h-4 group-hover:-translate-y-2 group-hover:w-5 transition-all transform rotate-180 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+            </svg>
+          </motion.p>
+          <motion.p initial={inactive} animate={inView === 2 ? active : inactive} className='py-5 z-30 cursor-pointer w-24 text-center rounded-[20px]' onClick={e => navigate("features")}>Features</motion.p>
+          <motion.p initial={inactive} animate={inView === 3 ? active : inactive} className='py-5 z-30 cursor-pointer w-24 text-center rounded-[20px]' onClick={e => navigate("work")}>Our Work</motion.p>
+          <motion.p initial={inactive} animate={inView === 4 ? active : inactive} className='py-5 z-30 cursor-pointer w-24 text-center rounded-[20px]' onClick={e => navigate("plans")}>Plans</motion.p>
+          <motion.p initial={inactive} animate={inView === 5 ? active : inactive} className='py-5 z-30 cursor-pointer w-24 text-center rounded-[20px]' onClick={e => navigate("testimonials")}>Testimonials</motion.p>
+          <motion.p initial={inactive} animate={inView >= 6 ? active : inactive} className='py-5 z-30 cursor-pointer w-24 text-center rounded-[20px]' onClick={e => navigate("contact")}>Contact</motion.p>
+        </div>
+      </motion.div>
     </div>
   )
 }
