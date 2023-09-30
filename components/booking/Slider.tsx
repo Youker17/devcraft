@@ -20,7 +20,7 @@ function Slider() {
                         slidesPerView={3}
                         autoplay={{ delay: 2000, disableOnInteraction: false }}
                         modules={[Autoplay, Pagination, Navigation]}
-                        className="w-full xl:w-9/12 -mt-10 "
+                        className="w-full xl:w-9/12 -mt-20 "
                         style={{marginLeft:"unset",marginRight:"unset"}}
                         breakpoints={{
                             // when window width is >= 640px
@@ -34,7 +34,7 @@ function Slider() {
                                 spaceBetween: 50,
                             },
                             // when window width is >= 1024px
-                            1200: {
+                            1280: {
                                 slidesPerView: 1,
                                 spaceBetween: 50,
                             },
