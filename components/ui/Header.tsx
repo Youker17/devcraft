@@ -106,11 +106,11 @@ export default function Header() {
               <li className="xl:tracking-[4.41px]">Pricing</li>
             </Link>
             <Link href={"/booking"}>
-              <button className=" flex flex-row group overflow-hidden hover:shadow-2xl hover:shadow-tertinary transform ease-in-out hover:scale-105 bg-tertinary px-[32px] py-[10px] text-black font-semibold leading-normal text-lg  rounded-[4px] ">
-                <p className="group-hover:-translate-x-3 translate-x-2 transition-all ">
+              <button className=" flex flex-row group overflow-hidden hover:shadow-2xl hover:shadow-tertinary transition-all transform ease-in-out hover:scale-105 bg-tertinary px-[32px] py-[10px] text-black font-semibold leading-normal text-lg  rounded-[4px] ">
+                <p className="group-hover:-translate-x-3 cur translate-x-2 transition-all ">
                   Book a call
                 </p>
-                <img src={call.src} className="w-5 aspect-square transition-all translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100" alt="" />
+                <img src={call.src} className="w-5 cur aspect-square transition-all translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100" alt="" />
               </button>
             </Link>
           </motion.ul>

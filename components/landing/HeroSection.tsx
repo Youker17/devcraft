@@ -71,7 +71,7 @@ function HeroSection() {
         <h1 className=' z-30 drop-shadow-[0px_4px_50px_#231D4F] w-full lg:w-[906px] mono  pt-[84px] text-[65px] font-extrabold overflow-visible   tracking-[2px] leading-[144.5%] '>
           <div className='w-full text-2xl lg:text-7xl gap-2 mx-auto overflow-visible justify-center'>
             <p className=' '>
-              Not Just Websites
+              Not Just Websites,
             </p>
             <div className='flex flex-row mx-auto justify-center items-center'>
               Crafting <span className='text-transparent'>-</span>
@@ -97,10 +97,10 @@ function HeroSection() {
           brand.
         </p>
         <motion.button className='relative hover:scale-110 transition-all duration-300 overflow-hidden group justify-center flex-row w-[200px] sm:w-[251px] flex rounded-[4px] text-background text-sm sm:text-lg font-bold leading-normal shadow-buttonShadow hover:shadow-buttonShadowHover py-[16px] cursor-pointer bg-tertinary'>
-          <div className=' mr-3 w-fit group-hover:-translate-x-5 transition-all transform'>
+          <div className=' cur mr-3 w-fit group-hover:-translate-x-5 transition-all transform'>
             Explore Plans
           </div>
-          <svg className="w-4 h-4 absolute right-10 text-background duration-300 -translate-y-96 group-hover:translate-y-1 group-hover:sm:translate-y-2 transition-all " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+          <svg className="w-4 h-4 cur absolute right-10 text-background duration-300 -translate-y-96 group-hover:translate-y-1 group-hover:sm:translate-y-2 transition-all " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
           </svg>
         </motion.button>
