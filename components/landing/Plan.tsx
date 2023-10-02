@@ -19,18 +19,9 @@ function Plan() {
         meets expertise as we craft exceptional online experiences that elevate
         your brand.
       </p>
-      {/* <div className=" bg-background w-[160px] py-3 relative rounded-[2rem]">
-        <p className="text-center font-semibold leading-normal text-[20px]">
-          Web
-        </p>
-        <div className="absolute right-1 top-2 bg-tertinary w-[40px] h-[40px] rounded-full flex justify-center items-center">
-          <Web />
-        </div>
-      </div> */}
+    
 
-      {/* <Toggle /> */}
-
-      <div className=" flex-col xl:flex-row relative h-auto xl:h-[590px] bg-transparent xl:bg-secondary mx-4 mt-[2rem] md:mt-[4.85rem] flex py-[3rem] px-[3.2rem] gap-8 rounded-[10px]">
+      <div className=" flex-col xl:flex-row relative h-auto xl:h-[590px] bg-transparent xl:bg-secondary mx-4 mt-[2rem] md:mt-[4.85rem] flex py-[3rem] px-[1.2rem] xs:px-[3.2rem] gap-8 rounded-[10px]">
       <div className="flex flex-col md:flex-row md:bg-secondary xl:bg-transparent md:py-[3rem] md:px-[3.2rem] xl:py-0 xl:px-0 rounded-[10px] gap-8 md:h-[70vh] xl:h-auto">
           {planData.slice(0, 2).map((e: planDataType, i: number) => (
             <div key={i} className="flex flex-col justify-between  bg-secondary md:bg-transparent py-[2rem] px-[1.5rem] xs:py-[3rem] xs:px-[2.7rem] md:py-0 md:px-0 rounded-[10px] h-[70vh] md:h-auto gap-8">

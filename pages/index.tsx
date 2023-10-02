@@ -14,8 +14,8 @@ export default function Home() {
       <Features />
       <Work />
       <Plan />
-      <Testimonials />
-      <Contact />
+      <Testimonials /> 
+       <Contact />
     </div>
   )
 }

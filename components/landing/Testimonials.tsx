@@ -7,7 +7,7 @@ import Testimony from "../ui/Testimony";
 
 function Testimonials() {
   return (
-    <div id="testimonials" className="flex flex-col justify-center items-center relative">
+    <div id="testimonials" className="flex flex-col justify-center w-full items-center relative">
       <Stars
         containerStyle="flex absolute -top-12 lg:top-0 left-0 lg:left-20 lg:left-20  drop-shadow-[0px_4px_77px_#EEBBC3]"
         bigStarStyle="absolute top-0 left-0 w-20 h-20 lg:w-[128px] lg:h-[149px] opacity-20 "
@@ -83,12 +83,12 @@ function Testimonials() {
         </div>
       </div>
       <Stars
-        containerStyle="absolute bottom-48 md:bottom-32 left-5 md:left-20 lg:left-20 w-full  drop-shadow-[0px_4px_77px_#EEBBC3]"
+        containerStyle="absolute bottom-48 md:bottom-32 left-5 md:left-20 lg:left-20   drop-shadow-[0px_4px_77px_#EEBBC3]"
         bigStarStyle="absolute top-8 left-0  w-24 h-24 md:w-[128px] md:h-[149px] opacity-20 "
         topLeftStarStyle="absolute top-8 right-16 top-48 md:top-10 md:left-20 w-[47px] h-[51px] opacity-70"
         bottomLeftStarStyle="hidden"
       />
-      <button className=" text-background cursor-pointer z-20 bg-tertinary w-fit font-bold text-[16px] uppercase leading-[150%] py-[16px] px-[24px] mt-[111px] rounded-[5px]">
+      <button className=" text-background cursor-pointer z-20 bg-tertinary hover:bg-tertinary/90 w-fit font-bold text-[16px] uppercase leading-[150%] py-[16px] px-[24px] mt-[111px] rounded-[5px]">
         Get a quote
       </button>
     </div>

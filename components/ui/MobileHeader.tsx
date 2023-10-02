@@ -61,7 +61,7 @@ export default function MobileHeader() {
         <motion.nav
           initial={{}}
           animate={
-            open ? { height: "90vh", backgroundColor: "#0f172a", margin: 0 } : undefined
+            open ? { height: "100vh", backgroundColor: "#0f172a", margin: 0 , top:0,left:0,position:"fixed" } : undefined
           }
           transition={{ duration: 0.5, ease: "easeInOut" }}
           exit={{ height: "250px", backgroundColor: "#fff" }}
@@ -93,7 +93,7 @@ export default function MobileHeader() {
             )}
           >
             <Link href={"#"}>
-              <motion.li className="xl:tracking-[4.41px]  duration-300 py-4 w-[85%]  px-4 rounded-lg  ">
+              <motion.li className="xl:tracking-[4.41px] ">
                 About
               </motion.li>
             </Link>
@@ -111,7 +111,7 @@ export default function MobileHeader() {
           </motion.ul>
         </motion.nav>
       </motion.div>
-      <motion.div
+      {/* <motion.div
         animate={{ opacity: 1 }}
         transition={{
           duration: 1,
@@ -121,7 +121,7 @@ export default function MobileHeader() {
           "w-full fixed top-0 opacity-0 left-0 h-screen bg-black/20 backdrop-blur-md "
         )}
         style={!open ? { zIndex: "-1000" } : { zIndex: "60" }}
-      ></motion.div>
+      ></motion.div> */}
     </>
   );
 }
